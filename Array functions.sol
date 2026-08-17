@@ -16,6 +16,8 @@ pragma solidity ^0.8.0;
     function totallenght () public view returns (uint) {
         return numbers.length;
     }
-    
+    function get_allnumber () public view returns (uint [] memory) {
+        return numbers ;
+    }
     
  }
