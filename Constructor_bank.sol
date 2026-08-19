@@ -25,8 +25,7 @@ contract Bank_system {
     function setdetails(
         address user_addres,
         string memory name,
-        uint add_cash,
-        uint withdraw_cash
+        
     ) public onlyowner {
 
         banks[user_addres] = bank(name, add_cash, withdraw_cash);
