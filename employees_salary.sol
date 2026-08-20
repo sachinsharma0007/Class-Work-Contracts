@@ -25,5 +25,14 @@ contract Salary_manager {
         return(emp.name, emp.salary, bonus, hra);
     }
 
-    
+    function deductions() public returns(uint pf, uint tds){
+        all_detail storage emp = employee_address[msg.sender];
+        pf = (emp.salary * 12) / 100;  
+        tds = (emp.salary * 7) / 100;
+
+        emp.salary = emp.salary - (pf + tds);
+
+        emp.pf = pf;
+        emp.tds = tds;
+    }
 }
