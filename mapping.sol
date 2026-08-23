@@ -14,6 +14,8 @@ contract SimpleWallet {
        balances[msg.sender] -= amount;
    }
 
-   
+   function getBalance(address user) public view returns(uint){
+       return balances[user];
+   }
 
 }
